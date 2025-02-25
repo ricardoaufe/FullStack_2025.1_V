@@ -17,8 +17,9 @@ top: 1px;
 left: 1px;}
 .display_inline{display:inline}
 .width_50{width: 100px;}
-.border{border-width: 3px;}
+.border_1{border-width: 3px;}
 .background{background-color: rgb(89, 141, 190) ;}
+.border_2{border: 3px solid black}
 
 
 #p2{
