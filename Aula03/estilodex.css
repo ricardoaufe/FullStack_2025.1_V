@@ -1,6 +1,6 @@
 .dotted{border-style: dotted;}
 .solid{border-style: solid;}
-.dashed{border-style:dashed}
+.dashed{border-style:dashed;}
 
 .radius_10{border-radius: 10px;}
 
@@ -8,10 +8,33 @@
 
 .margin{margin: 20px;}
 
-.width_200{ width: 200px;}
+.width_200{width: 200px;}
 
 .padding{padding: 10px;}
 
 .display_inline{display: inline;}
 
 .display_block{display: block;}
+
+#div_1{
+    background-color: chocolate;
+    display: inline;
+    border: 2px solid black;
+    position: relative; /* absolute é em relação a pagina e relative é em relação ao ultimo elemento da pagina */
+    top: 100px;
+    left: 100px;
+}
+#div_2{
+    background-color: chocolate;
+    display: inline;
+    border: 2px solid black;
+    position: absolute; /* absolute é em relação a pagina e relative é em relação ao ultimo elemento da pagina */
+    top: 100px;
+    left: 100px;
+}
+#contatos{background-color: green;    
+          border-color: yellowgreen;
+          position: fixed;
+          bottom: 0px;
+          right:0px;
+          z-index: 1;}
