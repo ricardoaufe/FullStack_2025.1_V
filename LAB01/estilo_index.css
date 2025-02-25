@@ -11,12 +11,18 @@
     margin-left: 400pt;
 }
 
-table, th, td {
-    border: 1px  dashed black;
-}
+.solid{border-style: solid;}
+.position{position: fixed;
+top: 1px;
+left: 1px;}
+.display_inline{display:inline}
+.width_50{width: 100px;}
+.border{border-width: 3px;}
+.background{background-color: rgb(89, 141, 190) ;}
+
 
 #p2{
-    margin-left: 450pt;
+    margin-left: 450px;
 }
 
 body{
