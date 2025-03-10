@@ -82,3 +82,12 @@ th{
     text-align: center;
 }
 
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: bisque;
+    font-family: Comic;
+    font-size: 15pt;
+}
