@@ -7,19 +7,21 @@
     margin-left: 500pt;
 }
 
-#foto_oceano {
-    margin-left: 400pt;
+.img{
+    display: flex;
+    justify-content: center;
 }
 
-.solid{border-style: solid;}
-.position{position: fixed;
-top: 1px;
-left: 1px;}
-.display_inline{display:inline}
-.width_50{width: 100px;}
-.border_1{border-width: 3px;}
-.background{background-color: rgb(89, 141, 190) ;}
-.border_2{border: 3px solid black}
+.all{
+    border: 3px solid black;
+    border-width: 3px;
+    background-color: rgb(89, 141, 190);
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    display:inline
+
+}
 
 
 #p2{
@@ -30,6 +32,10 @@ body{
     background-color: rgb(89, 141, 190);
 }
 
-.link:hover{
+a:hover{
     color: crimson;
+}
+
+table, tr, th, td {
+    border: solid black 2px;
 }
