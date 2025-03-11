@@ -39,6 +39,7 @@ h2 {
     color: indigo;
     text-indent: 10px;
     font-family: sans-serif;
+    flex-wrap: wrap;
     }
 
 .img{

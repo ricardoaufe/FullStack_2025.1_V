@@ -1,0 +1,28 @@
+.flex_container{
+    display: flex;
+    height: 300px;
+    background-color: blueviolet;
+    flex-flow: row wrap; /* USO DO FLEX*/
+    justify-content: space-evenly; /*USO DO JUSTIFY CONTENT (POSICIONAMENTO HORIZONTAL)*/
+    align-content: stretch;
+}
+
+.flex_container div{
+    background-color: white;
+    padding: 10px;
+    margin:10p;
+}
+
+#d5{
+    order: 1;
+    flex-basis: 200px;
+}
+
+#d24{
+    flex-basis: 200px;
+    align-self: flex-start;
+}
+
+
+/*  usar @media (max-width: xxx px) para controlar o posicionamento em outros dispositivos */
+

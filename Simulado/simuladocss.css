@@ -1,0 +1,51 @@
+.cabecalho{
+    display:flex;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+.cabecalho div{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 20pt;
+    background-color: blueviolet;
+    flex-flow: wrap;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    font-size: 15pt;
+    color:mediumblue;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+a{
+    color: mediumblue;
+}
+
+.friends_info{
+    display: flex;
+    justify-content: center;
+}
+
+.info02{
+    display: flex;
+    justify-content: center;
+}
+
+.info02 div{
+    display: flex;
+    justify-content: center;
+    color: mediumblue;
+    font-size: 14pt;
+    flex-direction: column;
+}
+
+
