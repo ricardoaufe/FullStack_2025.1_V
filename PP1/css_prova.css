@@ -1,0 +1,70 @@
+.cabecalho{
+    display: flex;
+    color: white;
+    background-color: royalblue;
+    justify-content: end;
+    gap: 5px;
+    
+}
+
+.sbc{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 25pt;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: lightgray;
+}
+
+.main div{
+    display: flex;
+    flex-direction: column;
+}
+
+.locais{
+    display: flex;
+    font-size: 15pt;
+    background-color: orange;
+    color: white;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 300px;
+    height: 50px;
+
+}
+
+.paco_municipal{
+    display: flex;
+    gap: 2px;
+    color:black;
+    font-size: 12pt;
+    flex-flow: column wrap;
+    width: 300px;
+    margin-left: 70px;
+    border: grey solid 5px;
+}
+
+.secretaria{
+    display: flex;
+    font-size: 15pt;
+    color: white;
+    background-color: rgb(119, 179, 29);
+    width: 500px;
+    height: 50px;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
