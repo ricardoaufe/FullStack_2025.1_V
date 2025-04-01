@@ -1,10 +1,18 @@
 body{
     background-color: darkslateblue;
+    font-size: 20pt;
 }
 
-.main{
+.flex-container{
     display: flex;
-    flex-direction: column;
-    max-width: 300px;
     justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+#resultado{
+    width: 200px;
+    font-size: 15pt;
+    padding-left: 20px;
 }
