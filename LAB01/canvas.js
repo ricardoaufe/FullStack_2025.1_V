@@ -22,6 +22,17 @@ function linha(cor, inicio, fim){
     ctx.closePath();
 }
 
+function arco(cor, ){
+    const [x, y, raio, angInicial, angFinal] = circun;
+    ctx.beginPath();
+    ctx.lineWidth = 2;
+    ctx.fillStyle = cor;
+    ctx.arc(x, y, raio, angInicial, angFinal);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath()
+}
+
 forma('blue', [0, 0, 50, 50])
 forma('red', [250, 0, 50, 50])
 forma('red', [115, 150, 35, 35])
@@ -36,3 +47,5 @@ forma('aquamarine', [275, 138, 26, 26])
 linha('green', [0, 150], [300, 150])
 linha('blue', [0, 0], [150, 150])
 linha('red', [300, 0], [150, 150])
+
+arco('blue', [200, 200, 50, 1.5*Math.PI, 2.5*Math.PI])
