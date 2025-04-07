@@ -1,6 +1,16 @@
-#canvas{
-    border: solid black 2px;
+.canvas-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
 
+#canvas1 {
+    border: solid black 2px;
+    background-color: white
+}
+#canvas2 {
+    border: solid black 2px;
+    background-color: aquamarine; /* Optional for visibility */
 }
