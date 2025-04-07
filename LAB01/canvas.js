@@ -78,7 +78,11 @@ function drawCanvas2() {
     forma(ctx2, 'brown', [350, 300, 20, 50]);
     forma(ctx2, 'brown', [50, 250, 20, 50]);
     forma(ctx2, 'black', [185, 250, 20, 50]);
-
+    forma(ctx2, 'lightblue', [155, 220, 30, 30]);
+    forma(ctx2, 'lightblue', [205, 220, 30, 30]);
+    linha(ctx2, 'pink', [100, 20], [180, 100]); /**triangulo */
+    linha(ctx2, 'pink', [100, 20], [260, 20]);
+    linha(ctx2, 'pink', [260, 20], [130, 100]);
 
 
 }
