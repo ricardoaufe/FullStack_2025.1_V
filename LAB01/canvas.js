@@ -36,7 +36,7 @@ function arco(ctx, cor, [x, y, raio, angInicial, angFinal, sentido], borderCor) 
         ctx.fillStyle = cor;
         ctx.fill();
     }
-    ctx.strokeStyle = borderCor;
+    ctx.strokeStyle = borderCor ?? cor;
     ctx.lineWidth = 1;
     ctx.stroke();
     ctx.closePath();
@@ -73,16 +73,35 @@ function drawCanvas1() {
 drawCanvas1();
 
 function drawCanvas2() {
-    forma(ctx2, 'grey', [0, 300, 400, 100]);
+
+    ctx2.beginPath();
+    ctx2.moveTo(145, 200);
+    ctx2.lineTo(195, 150); 
+    ctx2.lineTo(245, 200); 
+    ctx2.closePath();
+    ctx2.fillStyle = 'tomato'; 
+    ctx2.fill();
+    
+    
+
+    forma(ctx2, 'grey', [0, 300, 400, 100]); /**chao */
     forma(ctx2, 'brown', [145, 200, 100, 100]);
     forma(ctx2, 'brown', [350, 300, 20, 50]);
     forma(ctx2, 'brown', [50, 250, 20, 50]);
     forma(ctx2, 'black', [185, 250, 20, 50]);
     forma(ctx2, 'lightblue', [155, 220, 30, 30]);
     forma(ctx2, 'lightblue', [205, 220, 30, 30]);
-    linha(ctx2, 'pink', [100, 20], [180, 100]); /**triangulo */
-    linha(ctx2, 'pink', [100, 20], [260, 20]);
-    linha(ctx2, 'pink', [260, 20], [130, 100]);
+    forma(ctx2, 'oceanblue', [0, 300, 50, 100]);
+    forma(ctx2, 'oceanblue', [0, 350, 150, 50]);
+
+
+    arco(ctx2, 'oceanblue', [150, 400, 50, 0, 2 * Math.PI]);
+    arco(ctx2, 'oceanblue', [0, 300, 50, 0, 2 * Math.PI]);
+    arco(ctx2, 'yellow', [310, 100, 50, 0, 2 * Math.PI]);
+    arco(ctx2, 'green', [360, 290, 30, 0, 2 * Math.PI]);
+    arco(ctx2, 'green', [60, 230, 30, 0, 2 * Math.PI]);
+
+    
 
 
 }
