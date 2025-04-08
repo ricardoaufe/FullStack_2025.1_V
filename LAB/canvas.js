@@ -52,7 +52,7 @@ function drawCanvas1() {
     forma(ctx1, 'yellow', [25, 275, 25, 25]);
     forma(ctx1, 'black', [250, 275, 25, 25]);
     forma(ctx1, 'black', [275, 250, 25, 50]);
-    forma(ctx1, 'aquamarine', [0, 125, 25, 50]);
+    forma(ctx1, 'aquamarine', [0, 125, 20, 50]);
     forma(ctx1, 'aquamarine', [275, 138, 26, 26]);
 
     linha(ctx1, 'green', [0, 150], [300, 150]);
@@ -64,10 +64,10 @@ function drawCanvas1() {
     arco(ctx1, 'yellow', [220, 220, 15, 0, 2 * Math.PI], 'green');
     arco(ctx1, 'aquamarine', [150, 110, 15, 0, 2 * Math.PI], 'blue');
     arco(ctx1, 'aquamarine', [150, 300, 40, 0, 2 * Math.PI], 'green');
-    arco(ctx1, 'transparent', [150, 300, 75, 0, (3 * Math.PI) / 2], 'green');
-    arco(ctx1, 'transparent', [150, 300, 60, 0, (3 * Math.PI) / 2, true], 'green');
+    arco(ctx1, 'transparent', [150, 300, 75, 0, 3 * Math.PI / 2], 'green');
+    arco(ctx1, 'transparent', [150, 300, 60, 0, 3 * Math.PI / 2, true], 'green');
     arco(ctx1, 'transparent', [150, 150, 60, 0, Math.PI, true], 'green');
-    arco(ctx1, 'transparent', [150, 150, 75, 0, (3 * Math.PI) / 2, true], 'green'); /** Não consegui enquadrar certinho o semi-círculo */
+    /** arco(ctx1, 'transparent', [150, 150, 75, 0,5* Math.PI/6, true], 'green'); Não consegui enquadrar o semi-círculo */
 }
 
 drawCanvas1();

@@ -1,0 +1,13 @@
+body{
+    background-color: lightblue;
+}
+
+.canvas-container{
+    display: flex;
+    justify-content: center;
+}
+
+#main{
+    background-color: white;
+    border: solid, black, 5px;
+}
