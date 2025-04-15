@@ -28,8 +28,8 @@ document.addEventListener('mousemove', function(evento){
     let x_mouse = evento.clientX - rect.left;
     let y_mouse = evento.clientY - rect.top;
 
-    retangulo.x = x_mouse - retangulo.largura / 2;
-    retangulo.y = y_mouse - retangulo.altura / 2;
+    retangulo.x = x_mouse - retangulo.largura / 2; // divide por 2 para centralizar o mouse
+    retangulo.x = x_mouse - retangulo.largura / 2; // divide por 2 para centralizar o mouse
     
     retangulo.x = Math.min(Math.max(0, x_mouse - retangulo.largura / 2), canvas.width - retangulo.largura);
     retangulo.y = Math.min(Math.max(0, y_mouse - retangulo.altura / 2), canvas.height - retangulo.altura);
