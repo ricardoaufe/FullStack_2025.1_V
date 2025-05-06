@@ -5,7 +5,7 @@ var bodyParser = require("body-parser")
 var mongodb = require("mongodb");
 
 const MongoClient = mongodb.MongoClient;
-const uri = `mongodb+srv://rasf0831:46PBC0yWxzBkiuYq@ricardoferreira.fkudxyp.mongodb.net/?retryWrites=true&w=majority&appName=RicardoFerreira`;
+const uri = `mongodb+srv://rasf0831:oTJOKdOz5ei673Ms@ricardoferreira.fkudxyp.mongodb.net/?retryWrites=true&w=majority&appName=RicardoFerreira`;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
 var dbo = client.db("exemplo_bd");
@@ -23,14 +23,12 @@ server.listen(80);
 
 console.log("Servidor rodando ...".rainbow);
 
-
+app.post("",function(requisicao, resposta){
+    resposta.redirect("/LAB/index.html")
+});
 app.get("/", function(requisicao, resposta){
-    resposta.redirect("public/LAB/index.html")
-})
-
-app.post("/", function(requisicao, resposta){
-    resposta.redirect("public/LAB/index.html")
-})
+    resposta.redirect("/LAB/projetos.html")
+});
 
 app.post("/cadastrar", function(requisicao, resposta){
     let nome = requisicao.body.nome;
@@ -73,4 +71,22 @@ app.post('/logar', function(requisicao, resposta){
         }
     })
 
+})
+
+app.post('/blog', function(requisicao, resposta){
+    let titulo = requisicao.body.titulo;
+    let resumo = requisicao.body.resumo;
+    let conteudo = requisicao.body.conteudo;
+    console.log(titulo, resumo, conteudo);
+
+    var data = { db_titulo: titulo, db_resumo: resumo, db_conteudo: conteudo };
+
+    usuarios.insertOne(data, function(err){
+        if(err){
+            resposta.render("blog",{status: "Erro" ,titulo, resumo, conteudo});
+        }else{
+            resposta.render("blog",{status: "Sucesso", titulo, resumo, conteudo});
+        }
+        
+    })
 })
