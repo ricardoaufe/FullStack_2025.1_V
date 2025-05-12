@@ -1,0 +1,27 @@
+body{
+    background-color: cornflowerblue;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 10px;
+}
+
+.posts{
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    gap : 5px;
+    background-color: gainsboro;
+    border: 3px solid black;    
+    height: 50%;
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+
+}

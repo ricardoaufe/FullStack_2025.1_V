@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="estilo_blog.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+    <h1>Criar novo Post</h1>
+    <form action="/blog" method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo"required><br>
+
+        <label for="resumo">Resumo:</label>
+        <input type="text" name="resumo" required><br>
+
+        <label for="conteudo">Conteúdo:</label>
+        <textarea name="conteudo" required></textarea><br>
+
+        <button type="submit">Publicar</button>
+    </form>
+    </div>
+
+    
+</body>
+</html>
