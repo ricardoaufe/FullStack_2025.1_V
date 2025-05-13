@@ -25,10 +25,13 @@
             <h1>Posts</h1>
             
         <div class="posts">
-            <p><%= status %></p>
-            <h2><%= titulo %></h2>
-            <p><%= resumo %></p>
-            <p><%= conteudo %></p>
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <h2><%= post.db_titulo %></h2>
+                    <p><%= post.db_resumo %></p>
+                    <p><%= post.db_conteudo %></p>
+                </div>
+            <% }); %>
         </div>
             
     </body>

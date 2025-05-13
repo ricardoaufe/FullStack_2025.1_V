@@ -10,6 +10,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 
 var dbo = client.db("exemplo_bd");
 var usuarios = dbo.collection("usuarios");
+var posts = dbo.collection("posts");
 
 var app = express();
 app.use(express.static('./public'))
@@ -73,20 +74,30 @@ app.post('/logar', function(requisicao, resposta){
 
 })
 
-app.post('/blog', function(requisicao, resposta){
+
+app.post("/blog", function(requisicao, resposta) {
     let titulo = requisicao.body.titulo;
     let resumo = requisicao.body.resumo;
     let conteudo = requisicao.body.conteudo;
-    console.log(titulo, resumo, conteudo);
 
     var data = { db_titulo: titulo, db_resumo: resumo, db_conteudo: conteudo };
 
-    usuarios.insertOne(data, function(err){
+    posts.insertOne(data, function(err){
         if(err){
-            resposta.render("blog",{status: "Erro" ,titulo, resumo, conteudo});
+            resposta.render("blog", { status: "Erro ao cadastrar", titulo, resumo, conteudo });
         }else{
-            resposta.render("blog",{status: "Sucesso", titulo, resumo, conteudo});
+            resposta.redirect("/blog"); // Redireciona para a página de listagem
         }
-        
-    })
-})
+    });
+});
+
+
+app.get("/blog", function(requisicao, resposta) {
+    posts.find().toArray(function(err, contents) {
+        if (err) {
+            resposta.render("blog", { status: "Erro ao carregar posts", posts: [] });
+        } else {
+            resposta.render("blog", { posts: contents });
+        }
+    });
+});
