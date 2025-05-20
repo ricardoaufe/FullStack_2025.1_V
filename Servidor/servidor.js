@@ -129,3 +129,23 @@ app.post("/carros_cadastrar", function(requisicao, resposta){
         }
     })
 })
+
+app.post('/carros_logar', function(requisicao, resposta){
+    let Login = requisicao.body.Login;
+    let Senha = requisicao.body.Senha;
+    console.log(Login, Senha);
+
+    var dados = {db_Login: Login, db_Senha: Senha}
+
+    UsuariosCarros.find(dados).toArray(function(err, Items){
+        console.log(Items)
+        if(Items.length == 0){
+            resposta.render("carros_login",{Status: "usuario/senha não encontrado"});
+        }else if(err){
+            resposta.render("carros_login",{Status: "erro ao logar"});
+        }else{
+            resposta.render("carros_login",{Status: "usuario "+Login+" logado"});
+        }
+    })
+
+})
