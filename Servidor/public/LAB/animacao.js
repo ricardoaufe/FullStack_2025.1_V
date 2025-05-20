@@ -25,7 +25,7 @@ let retangulo = new Retangulo('blue', 'red', 3, 200, 200, 20, 20);
 
 document.addEventListener('mousemove', function(evento){
     let rect = canvas.getBoundingClientRect();
-    let x_mouse = evento.clientX - rect.left;
+    let x_mouse = evento.clientX - rect.left; 
     let y_mouse = evento.clientY - rect.top;
 
     retangulo.x = x_mouse - retangulo.largura / 2; // divide por 2 para centralizar o mouse
