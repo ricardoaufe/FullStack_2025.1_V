@@ -149,3 +149,6 @@ app.post('/carros_logar', function(requisicao, resposta){
     })
 
 })
+
+//GAQBidcgmeUv6Sgp
+//mongodb+srv://rasf0831:GAQBidcgmeUv6Sgp@ricardoferreira.fkudxyp.mongodb.net/?retryWrites=true&w=majority&appName=RicardoFerreira
